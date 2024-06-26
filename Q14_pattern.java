@@ -10,6 +10,7 @@ public class Q14_pattern {
         pattern8(5);
         pattern9(5);
         pattern10(5);
+        pattern16(5);
     }
     public static void pattern1(int val){
         for(int i=1;i<=val;i++){
@@ -261,5 +262,61 @@ public class Q14_pattern {
             sp-=2;
             st++;
         }
+        pattern14(5);
     }
+    public static void pattern14(int val){
+        int sp=val/2;
+        int st=1;
+        for(int i=1;i<=val;i++){
+            for(int j=1;j<=sp;j++){
+                if(i==val/2+1){
+                    System.out.print("*\t");
+                }
+                else{
+                    System.out.print(" \t");
+                }
+            }
+            for(int k=1;k<=st;k++){
+                System.out.print("*\t");
+            }
+            if(i<=val/2){
+                st++;
+            }
+            else{
+                st--;
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern15(int val){
+        int sp=val-2;
+
+        for(int i=1;i<=val;i++){
+            System.out.print("*");
+            for(int k=1;k<=sp;k++){
+                if(i==val/2+1){
+                    System.out.println("*");
+                }
+                else if(i>val/2+1){
+
+                }
+            }
+            System.out.print("*");
+        }
+        
+    }
+    public static void pattern16(int val){
+        for(int i=1;i<=val;i++){
+            for(int j=1;j<=val;j++){
+                if(j==1 || j==val|| ((i+j==val+1||i==j) && (i>val/2))){
+                    System.out.print("*\t");
+                }
+                else{
+                    System.out.print(" \t");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
 }
